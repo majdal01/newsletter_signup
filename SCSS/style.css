@@ -68,6 +68,9 @@ p {
   width: 100%;
   height: auto;
 }
+.form-container .tablet-img {
+  display: none;
+}
 .form-container .form-style .checkmark-list {
   list-style: none;
 }
@@ -113,4 +116,34 @@ p {
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    max-width: 38rem;
+    padding: 2.5rem;
+  }
+  .form-container .desktop-img {
+    display: none;
+  }
+  .form-container .tablet-img {
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+  .form-container .tablet-img img {
+    width: 100%;
+    height: auto;
+  }
+  .form-container .input-group {
+    margin-top: 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
