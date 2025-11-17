@@ -89,9 +89,18 @@ $font-weight-bold: 700;
 }
 
 @mixin button {
-        background-color: $blue-800;
-        color: $white;
-        height: 3.5rem;
-        border-radius: 0.5rem;
-        @include text-preset-2-bold;
+    background-color: $blue-800;
+    color: $white;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    @include text-preset-2-bold;
+
+    &:hover {
+      background: $gradient-4;
+      color: $white;
+      border: none;
+      box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+    }
 }
+

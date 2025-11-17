@@ -20,13 +20,14 @@
   font-family: "Roboto", sans-serif;
 }
 
-main {
+.main {
   background-color: hsl(235, 18%, 26%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
+  height: 100vh;
+  padding: 0 1rem;
 }
 
 h1 {
@@ -59,6 +60,7 @@ p {
   flex-direction: row;
   margin: 1rem;
   gap: 4rem;
+  align-items: center;
 }
 .form-container .desktop-img {
   max-width: 25rem;
@@ -111,15 +113,23 @@ p {
   color: hsl(0, 100%, 100%);
   height: 3.5rem;
   border-radius: 0.5rem;
+  cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-size: 1rem; /* 16px */
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0rem;
 }
+.form-container .form-style .input-group #submit-button:hover {
+  background: linear-gradient(to right, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
+  color: hsl(0, 100%, 100%);
+  border: none;
+  box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+}
 
-.desktop-succes {
+.desktop-tablet-succes {
   display: flex;
+  display: none;
   flex-direction: column;
   width: 31.5rem;
   height: auto;
@@ -128,17 +138,17 @@ p {
   background-color: hsl(0, 100%, 100%);
   gap: 2rem;
 }
-.desktop-succes .success-img {
+.desktop-tablet-succes .success-img {
   width: 4rem;
   height: 4rem;
 }
-.desktop-succes .h1-succes {
+.desktop-tablet-succes .h1-succes {
   margin-bottom: 0;
 }
-.desktop-succes .p-succes {
+.desktop-tablet-succes .p-succes {
   margin-bottom: 0;
 }
-.desktop-succes .p-succes .email-link {
+.desktop-tablet-succes .p-succes .email-link {
   font-family: "Roboto", sans-serif;
   font-size: 1rem; /* 16px */
   font-weight: 700;
@@ -147,16 +157,23 @@ p {
   color: hsl(234, 29%, 20%);
   text-decoration: none;
 }
-.desktop-succes .succes-button {
+.desktop-tablet-succes .succes-button {
   background-color: hsl(234, 29%, 20%);
   color: hsl(0, 100%, 100%);
   height: 3.5rem;
   border-radius: 0.5rem;
+  cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-size: 1rem; /* 16px */
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0rem;
+}
+.desktop-tablet-succes .succes-button:hover {
+  background: linear-gradient(to right, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
+  color: hsl(0, 100%, 100%);
+  border: none;
+  box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -189,8 +206,9 @@ p {
   }
 }
 @media (max-width: 425px) {
-  main {
+  .main {
     padding: 0;
+    height: 100%;
   }
   h1 {
     font-family: "Roboto", sans-serif;
@@ -204,6 +222,7 @@ p {
     max-width: 38rem;
     padding: 0 1.5rem 2.5rem 1.5rem;
     border-radius: 0;
+    margin-bottom: 0;
   }
   .form-container .desktop-img, .form-container .tablet-img {
     display: none;
@@ -226,5 +245,16 @@ p {
   }
   .form-container .form-style .checkmark-list img {
     align-self: flex-start;
+  }
+  .mobile-succes {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 6.5rem 1.5rem;
+    width: 100%;
+    border-radius: 0;
+  }
+  .mobile-succes .succes-button {
+    margin-top: 6.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -7,13 +7,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
-main {
+.main {
   background-color: $blue-700;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
+  height: 100vh;
+  padding: 0 $spacing-200;
 }
 
 h1 {
@@ -37,6 +38,7 @@ p {
   flex-direction: row;
   margin: 1rem;
   gap: $spacing-800;
+  align-items: center;
 
   .desktop-img {
     max-width: 25rem;
@@ -92,8 +94,11 @@ p {
   }
 }
 
-.desktop-succes {
+// Success message desktop and tablet styles
+
+.desktop-tablet-succes {
   display: flex;
+  display: none;
   flex-direction: column;
   width: 31.5rem;
   height: auto;
@@ -125,6 +130,10 @@ p {
     @include button;
   }
 }
+
+// Success message mobile styles
+
+
 
 @media (max-width: 768px) {
 
@@ -165,8 +174,9 @@ p {
 
 @media (max-width: 425px) {
 
-  main {
+  .main {
     padding: 0;
+    height: 100%;
   }
 
   h1 {
@@ -177,6 +187,7 @@ p {
     max-width: 38rem;
     padding: 0 $spacing-300 $spacing-500 $spacing-300;
     border-radius: 0;
+    margin-bottom: 0;
   
       .desktop-img, .tablet-img {
         display: none;
@@ -207,6 +218,25 @@ p {
           align-self: flex-start;
         }
       }
+
+  }
+
+  .mobile-succes {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-1300 $spacing-300;
+    width: 100%;
+
+    border-radius: 0;
+    
+    .succes-button {
+      margin-top: $spacing-1300;
+    }
+
+    
+   
+
 
   }
 }
