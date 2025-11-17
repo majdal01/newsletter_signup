@@ -87,3 +87,11 @@ $font-weight-bold: 700;
     line-height: 150%;
     letter-spacing: 0;
 }
+
+@mixin button {
+        background-color: $blue-800;
+        color: $white;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        @include text-preset-2-bold;
+}

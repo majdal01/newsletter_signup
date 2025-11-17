@@ -122,10 +122,41 @@ p {
   display: flex;
   flex-direction: column;
   width: 31.5rem;
-  height: 32.5rem;
+  height: auto;
   border-radius: 2.25rem;
   padding: 4rem;
   background-color: hsl(0, 100%, 100%);
+  gap: 2rem;
+}
+.desktop-succes .success-img {
+  width: 4rem;
+  height: 4rem;
+}
+.desktop-succes .h1-succes {
+  margin-bottom: 0;
+}
+.desktop-succes .p-succes {
+  margin-bottom: 0;
+}
+.desktop-succes .p-succes .email-link {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem; /* 16px */
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: hsl(234, 29%, 20%);
+  text-decoration: none;
+}
+.desktop-succes .succes-button {
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 100%, 100%);
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem; /* 16px */
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0rem;
 }
 
 @media (max-width: 768px) {

@@ -86,11 +86,7 @@ p {
       }
 
       #submit-button {
-        background-color: $blue-800;
-        color: $white;
-        height: 3.5rem;
-        border-radius: 0.5rem;
-        @include text-preset-2-bold;
+        @include button;
       }
     }
   }
@@ -100,10 +96,34 @@ p {
   display: flex;
   flex-direction: column;
   width: 31.5rem;
-  height: 32.5rem;
+  height: auto;
   border-radius: 2.25rem;
   padding: $spacing-800;
   background-color: $white;
+  gap: $spacing-400;
+
+  .success-img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .h1-succes {
+    margin-bottom: 0;
+  }
+
+  .p-succes {
+    margin-bottom: 0;
+
+    .email-link {
+      @include text-preset-2-bold;
+      color: $blue-800;
+      text-decoration: none
+    }
+  }
+
+  .succes-button {
+    @include button;
+  }
 }
 
 @media (max-width: 768px) {
