@@ -3,6 +3,15 @@ let input = document.getElementById('form-input');
 let errorMessage = document.querySelector('.error-message');
 const successDesktop = document.querySelector('.desktop-tablet-succes');
 const successButton = document.querySelector('.succes-button');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function clearError() {
+if (errorMessage) errorMessage.style.display = 'none';
+if (input) input.classList.remove('input-error');
+}
+
+input.addEventListener('input', clearError);
+input.addEventListener('focus', clearError);
 
 
 function handleSubmit(event)    {
@@ -12,24 +21,25 @@ function handleSubmit(event)    {
   const data = Object.fromEntries(formData.entries());
   console.log(data);
 
-  if (!input.value.trim() || !input.value.includes('@')) {
+  if (!input.value.trim() || !emailRegex.test(input.value.trim())) {
     errorMessage.style.display = 'block';
-    return;
-  } else {
-    form.style.display = 'none';
-    successDesktop.classList.add('is-visible');
+    input.classList.add('input-error');
     return;
   }
+
+    form.style.display = 'none';
+    successDesktop.classList.add('is-visible');
 
 };
 
 form.addEventListener('submit', handleSubmit);
 
 
-
 function closeSuccessMessage() {
   successDesktop.classList.remove('is-visible');
   form.style.display = 'flex';
   input.value = '';
+  clearError();
 };
+
 successButton.addEventListener('click', closeSuccessMessage);
