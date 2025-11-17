@@ -15,7 +15,7 @@
 
   <!-- Sign-up form start -->
   <main class="main">
-    <div class="form-container">
+    <div class="form-container" id="form-container">
       <form class="form-style" action="#" method="post" novalidate>
 
           <div class="tablet-img">
@@ -38,9 +38,9 @@
           <div class="input-group">
             <div class="label-container">
               <label for="email">Email address</label>
-              <label for="email">Valid email required</label>
+              <label class="error-message" for="email">Valid email required</label>
             </div>
-            <input aria-label="email address" type="text" name="email" placeholder="email@company.com">
+            <input id="form-input" aria-label="email address" type="text" name="email" placeholder="email@company.com">
             <button id="submit-button" type="submit">Subscribe to monthly newsletter</button>
           </div>
       </form>

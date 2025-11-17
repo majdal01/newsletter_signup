@@ -109,7 +109,6 @@ p {
 // Success message desktop and tablet styles
 
 .desktop-tablet-succes {
-  display: flex;
   display: none;
   flex-direction: column;
   width: 31.5rem;
@@ -118,6 +117,10 @@ p {
   padding: $spacing-800;
   background-color: $white;
   gap: $spacing-400;
+
+  &.is-visible {
+    display: flex;
+  }
 
   .success-img {
     width: 4rem;
