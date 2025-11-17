@@ -73,9 +73,21 @@ p {
       flex-direction: column;
       margin-top: $spacing-400;
 
-      label {
-        @include text-preset-3;
+      .label-container {
+        display: flex;
+        justify-content: space-between;
         margin-bottom: $spacing-100;
+
+        label:nth-child(1) {
+          @include text-preset-3;
+          color: $blue-800;
+        }
+
+        label:nth-child(2) {
+          @include text-preset-3;
+          color: $red;
+          display: none;
+        }
       }
 
       input {
@@ -222,8 +234,8 @@ p {
   }
 
   .mobile-succes {
-    display: block;
     display: flex;
+    display: none;
     flex-direction: column;
     padding: $spacing-1300 $spacing-300;
     width: 100%;
