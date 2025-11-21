@@ -1,4 +1,4 @@
-let form = document.getElementById('form-container');
+const form = document.getElementById('form-container');
 let input = document.getElementById('email');
 let errorMessage = document.querySelector('.error-message');
 const successDesktop = document.querySelector('.desktop-tablet-succes');
@@ -23,7 +23,13 @@ function handleSubmit(event)    {
   const data = Object.fromEntries(formData.entries());
   console.log(data);
 
-  if (!input.value.trim() || !emailRegex.test(input.value.trim())) {
+  if (!errorMessage || !input) {
+    console.error('Required form elements are missing');
+    return;
+  }
+
+  const trimmedValue = input.value.trim();
+  if (!trimmedValue || !emailRegex.test(trimmedValue)) {
     errorMessage.style.display = 'block';
     input.classList.add('input-error');
     return;
@@ -31,10 +37,9 @@ function handleSubmit(event)    {
 
     form.style.display = 'none';
     successDesktop.classList.add('is-visible');
-    const email = input.value.trim();
+    const email = trimmedValue;
     mailto.textContent = email;
     mailto.href = 'mailto:' + email;
-
 
 };
 
