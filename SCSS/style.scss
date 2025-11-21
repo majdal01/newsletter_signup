@@ -17,7 +17,7 @@
   padding: 0 $spacing-200;
 }
 
-h1 {
+h1, h2 {
   @include text-preset-1;
   margin-bottom: $spacing-400;
 }
@@ -134,7 +134,7 @@ p {
     height: 4rem;
   }
 
-  .h1-succes {
+  .h2-succes {
     margin-bottom: 0;
   }
 
@@ -159,7 +159,7 @@ p {
 
 @media (max-width: 768px) {
 
-  h1 {
+  h1, h2 {
     margin-bottom: $spacing-300;
   }
 
@@ -201,7 +201,7 @@ p {
     height: 100%;
   }
 
-  h1 {
+  h1, h2 {
     @include text-preset-1-mobile;
   }
 

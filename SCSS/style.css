@@ -30,7 +30,7 @@
   padding: 0 1rem;
 }
 
-h1 {
+h1, h2 {
   font-family: "Roboto", sans-serif;
   font-size: 3.5rem; /* 56px */
   font-weight: 700;
@@ -168,7 +168,7 @@ p {
   width: 4rem;
   height: 4rem;
 }
-.desktop-tablet-succes .h1-succes {
+.desktop-tablet-succes .h2-succes {
   margin-bottom: 0;
 }
 .desktop-tablet-succes .p-succes {
@@ -203,7 +203,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  h1 {
+  h1, h2 {
     margin-bottom: 1.5rem;
   }
   p {
@@ -236,7 +236,7 @@ p {
     padding: 0;
     height: 100%;
   }
-  h1 {
+  h1, h2 {
     font-family: "Roboto", sans-serif;
     font-size: 2.5rem; /* 40px */
     font-weight: 700;
