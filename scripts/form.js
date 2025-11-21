@@ -5,7 +5,7 @@ const successDesktop = document.querySelector('.desktop-tablet-succes');
 const successButton = document.querySelector('.succes-button');
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-let mailto = document.getElementById('mailto');
+const mailto = document.getElementById('mailto');
 
 function clearError() {
 if (errorMessage) errorMessage.style.display = 'none';
