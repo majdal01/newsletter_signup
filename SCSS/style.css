@@ -114,7 +114,12 @@ p {
   color: hsl(4, 1006%, 67%);
   display: none;
 }
-.form-container .form-style .input-group input {
+.form-container .form-style .input-group #email {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
   height: 3.5rem;
   padding: 1rem;
   justify-content: space-between;

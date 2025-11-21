@@ -1,5 +1,5 @@
 let form = document.getElementById('form-container');
-let input = document.getElementById('form-input');
+let input = document.getElementById('email');
 let errorMessage = document.querySelector('.error-message');
 const successDesktop = document.querySelector('.desktop-tablet-succes');
 const successButton = document.querySelector('.succes-button');

@@ -90,7 +90,8 @@ p {
         }
       }
 
-      input {
+      #email {
+        @include text-preset-2-regular;
         height: 3.5rem;
         padding: 1rem;
         justify-content: space-between;
@@ -216,7 +217,7 @@ p {
  
       .mobile-img {
         display: block;
-        width: calc(100% + #{2 * $spacing-300});
+        width: calc(100% + 2 * $spacing-300);
         height: auto;
         margin-left: -$spacing-300;
         margin-right: -$spacing-300;

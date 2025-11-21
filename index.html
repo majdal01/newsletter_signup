@@ -38,9 +38,9 @@
           <div class="input-group">
             <div class="label-container">
               <label for="email">Email address</label>
-              <label class="error-message" for="email">Valid email required</label>
+              <span id="email-error" class="error-message" aria-live="polite" aria-atomic="true">Valid email required</span>
             </div>
-            <input id="form-input" aria-label="email address" type="text" name="email" placeholder="email@company.com">
+            <input id="email" type="email" name="email" placeholder="email@company.com">
             <button id="submit-button" type="submit">Subscribe to monthly newsletter</button>
           </div>
       </form>
